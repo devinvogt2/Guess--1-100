@@ -1,1 +1,152 @@
 /* Write your CSS code in this file */
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-image: linear-gradient(to right, rgb(167 93 182 / 95%), rgb(200 223 243 / 97%), rgb(167 93 182 / 95%));
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+header {
+    text-align: center;
+}
+
+/* h1 {
+    font-family: sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: rgb(21 20 21);
+} */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-rules {
+    text-align: center;
+}
+.gameContainer {
+    width: 50em;
+    padding: 20px;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.guessBtn {
+    line-height: 5%;
+}
+
+#enterGuessBtn {
+    border: 3px solid black;
+    border-radius: 2em;
+    background-color: mediumspringgreen;
+    height: 50px;
+    width: 170px;
+    font-family: fangsong;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#guessContain {
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    margin: 1.5em;
+}
+
+input[type=number] {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    resize: none;
+  }
+  ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  :-moz-placeholder {
+    text-align: center;
+  }
+  ::-webkit-inner-spin-button {
+
+  }
+::-webkit-inner-spin-button, 
+::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.previousGuessesContainer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0px;
+}
+
+.previousGuessesContainer li {
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    width: 1em;
+    height: 1em;
+    padding: 20px;
+    margin: 1em;
+    display: block;
+    list-style-type: none;
+    flex: 0 1 auto;
+}
+
+.hint-Reset {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+#giveHintBtn {
+    border: 3px solid black;
+    border-radius: 2em;
+    background-color: rgb(0, 200, 250);
+    height: 40px;
+    width: 150px;
+    font-family: fangsong;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#resetGameBtn {
+    border: 3px solid black;
+    border-radius: 2em;
+    background-color: rgb(250, 0, 75);
+    height: 40px;
+    width: 150px;
+    font-family: fangsong;
+    font-weight: bolder;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: rgba(228, 135, 228, 0.753);
+        width: 100vw;
+        padding: 3em;
+    }
+}
