@@ -283,6 +283,10 @@ function playerInput () {
     }
     else if (input === 69) {
         document.getElementById("hintMsg").innerHTML = "Oh my!" + "😳";
+        previousGuess.push(input)
+        updatePreviousGuess()
+        checkLimit()
+        maxGuessLimit++
     }
     else if (diff < 5) {
         document.getElementById("hintMsg").innerHTML = "YOU'RE RED HOT!"
