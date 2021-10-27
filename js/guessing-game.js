@@ -276,8 +276,13 @@ function playerInput () {
      }
     else if (input === answer) {
         document.getElementById("hintMsg").innerHTML = "You Win!";
+        let shownAnswer = document.getElementById("answer")
+        shownAnswer.innerHTML = "The correct answer is: " + answer
         document.getElementById("enterGuessBtn").disabled = true
         document.getElementById("giveHintBtn").disabled = true
+    }
+    else if (input === 69) {
+        document.getElementById("hintMsg").innerHTML = "Oh my!" + "😳";
     }
     else if (diff < 5) {
         document.getElementById("hintMsg").innerHTML = "YOU'RE RED HOT!"
@@ -310,7 +315,7 @@ function playerInput () {
         
     }
     
-    else if (diff < 101) {
+    else if (diff < 100) {
         document.getElementById("hintMsg").innerHTML = "WTF was that guess?."
         previousGuess.push(input)
         updatePreviousGuess()
@@ -346,7 +351,9 @@ function checkLimit () {
         document.getElementById("enterGuessBtn").disabled = true
         document.getElementById("giveHintBtn").disabled = true
         let hint = document.getElementById("hintMsg")
-        hint.innerHTML = "You have lost :("
+        hint.innerHTML = "You have lost!"
+        let shownAnswer = document.getElementById("answer")
+        shownAnswer.innerHTML = "The correct answer is: " + answer
         return true
     }
 }
